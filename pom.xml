@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@nourmanai 
+nourmanai
+/
+achat
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+achat/pom.xml
+@nourmanai
+nourmanai Update pom.xml
+Latest commit 91da548 10 minutes ago
+ History
+ 1 contributor
+93 lines (87 sloc)  2.63 KB
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -53,6 +82,12 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<dependency>
+
+             <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+
+</dependency>
 
 	</dependencies>
 
@@ -70,7 +105,33 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.1.0</version>
+             </plugin>
 		</plugins>
 	</build>
-
+<distributionManagement>
+<repository>
+<id>deploymentRepo</id>
+<name>Nexus Repository</name>
+<url>http://localhost:8081/repository/maven-releases/</url>
+</repository>
+</distributionManagement>
 </project>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+http://
